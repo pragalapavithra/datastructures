@@ -1,0 +1,54 @@
+Space and Time Complexities :
+
+1. Insertion :
+
+    Average case : O (log n) --> if tree is balanced
+    Worst case : O(n) or O(h) --> Where h is height of the tree
+
+    Space complexity same as time complexity and it is due to recursion stack
+
+2.Search
+
+   Average case : O (log n) --> if tree is balanced
+   Worst case : O(n)
+
+   Space Complexity :
+   Iterative approach : O(1)
+   Recursive : O(n)
+
+3. Find Min and Max element
+
+   Average case : O (log n) --> if tree is balanced
+   Worst case : O(n)
+
+      Space Complexity :
+      Iterative approach : O(1)
+      Recursive : O(n)
+
+4. Find Height / Max Depth of BST
+
+   Average case : O (log n) --> if tree is balanced
+   Worst case : O(n)
+
+      Space Complexity :
+      Iterative approach : O(1)
+      Recursive : O(n)
+
+5. Tree Traversals:
+    BFS and DFS are two ways of traversing trees i.e., accessing each node in the tree
+    Time Complexity : O(n) accessing each and every node
+    Space Complexity: O(n)  queue in case of BFS and recursion stack in case of DFS
+
+  a.  Depth First Search :
+
+    Here , Deepest node is visited first and then backtracks to its parent node .Backtracking is used for
+    traversal
+
+       1. Inorder
+       2. PreOrder
+       3. PostOrder
+
+  b.Breadth First Search :
+    Begins at the root node and visits all nodes level by level
+
+
