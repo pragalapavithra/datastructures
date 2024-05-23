@@ -1,0 +1,52 @@
+Tree is a non linear data structure
+
+Terminologies :
+1. Root
+2. Child
+3. Parent
+4. Sibling
+5. Leaf Node
+6. Depth (no of links between root and node x)
+7. Height of node x ( largest no of links between node x and any of the leaf node)
+8. Height of tree is height of root node
+
+Applications :
+1. File system with directories and folders and files
+2. DNS server (ex., com --> google.com --> mail.google.com)
+3. To implement efficient searching and sorting
+
+Binary Tree:
+    All the nodes in the tree has at most 2 children (0,1,2 children)
+
+Complete Binary Tree :
+   All levels except possibly the last level are completely filled and in last level , nodes which are
+filled should be as left as possible
+
+Perfect Binary Tree :
+   All level are completely filled
+
+Max no of nodes at level l : 2^l -1
+
+Max No of nodes in binary tree with height :
+ n  = 2^0 + 2^1 + 2^2 + 2^3
+ n = 2^(h+1) - 1
+
+Max height of  n number of nodes
+ h = log 2(n+1) - 1
+
+Balanced binary tree :
+    Difference between height of left subtree and right subtree for all the nodes should not more than 1
+
+Height of tree with 1 node :
+   Zero (only root node is there)
+
+Binary Search Tree:
+
+Why ? :    Search , insert and removal of element in array and linkedlist is having max of o(n),o(1),o(n) complexities
+respectively whereas if we use BST , all the operations will be in o(log n)
+
+What ? : Values of all the nodes in left subtree must be lesser or equal to right subtree
+
+Refer :
+1. https://www.youtube.com/watch?v=H5JubkIy_p8&ab_channel=mycodeschool
+
