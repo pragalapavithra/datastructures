@@ -1,11 +1,11 @@
-package trees;
+package trees.binaryTrees;
 
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class BinarySearchTree {
-    TreeNode root;
+    public TreeNode root;
     public class TreeNode {
         int val;
         TreeNode left;
