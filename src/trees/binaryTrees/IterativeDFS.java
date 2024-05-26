@@ -1,5 +1,8 @@
 package trees.binaryTrees;
 
+import trees.binaryTrees.BinarySearchTree.TreeNode;
+
+import java.util.ArrayList;
 import java.util.Stack;
 
 import static trees.utils.HelperUtils.binaryTreeInsertionHelper;
@@ -37,7 +40,7 @@ public class IterativeDFS {
         }
         System.out.println();
     }
-    public void iterativePostOrder(BinarySearchTree.TreeNode node){
+    public void iterativePostOrder(TreeNode node){
         Stack<BinarySearchTree.TreeNode> st1 = new Stack<>();
         Stack<BinarySearchTree.TreeNode> st2 = new Stack<>();
         if(node == null) return ;
@@ -58,7 +61,45 @@ public class IterativeDFS {
         }
         System.out.println();
     }
+    class Pair{
+        TreeNode val;
+        int count;
 
+        public Pair(TreeNode val,int count) {
+            this.val = val;
+            this.count = count;
+        }
+    }
+    public  void PrePostInOrderTraversal(TreeNode root){
+        if(root==null)return ;
+        ArrayList<TreeNode> inOrder=new ArrayList<>();
+        ArrayList<TreeNode> preOrder=new ArrayList<>();
+        ArrayList<TreeNode> postOrder=new ArrayList<>();
+        Stack<Pair> st = new Stack<Pair>();
+        st.push(new Pair(root,1));
+        while(!st.isEmpty()){
+            Pair it = st.pop();
+            if(it.count == 1){
+                inOrder.add(it.val);
+                it.count++;
+                st.push(it);
+                if(it.val.left!=null){
+                    st.push(new Pair(it.val.left,1));
+                }
+            }
+            else if(it.count ==2){
+                preOrder.add(it.val);
+                it.count++;
+                st.push(it);
+                if(it.val.right!=null){
+                    st.push(new Pair(it.val.right,1));
+                }
+            }
+            else{
+                postOrder.add(it.val);
+            }
+        }
+    }
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         IterativeDFS obj = new IterativeDFS();
